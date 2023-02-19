@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculate Life in Weeks</title>
+</head>
+<body>
+	<h1>Calculate Your Life in Weeks</h1>
+	<p>Enter your age below to see how many weeks you have left:</p>
+	<form>
+		<label for="age">Age (in years):</label>
+		<input type="text" id="age" name="age">
+		<button type="button" onclick="calculate()">Calculate</button>
+	</form>
+	<p id="result"></p>
+	<script>
+		function calculate() {
+			var age = document.getElementById("age").value;
+			var days = (90 - parseInt(age)) * 365;
+			var weeks = (90 - parseInt(age)) * 52;
+			var months = (90 - parseInt(age)) * 12;
+			var result = "You have " + days + " days, " + weeks + " weeks, and " + months + " months left.";
+			document.getElementById("result").innerHTML = result;
+		}
+	</script>
+</body>
+</html>
